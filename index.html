@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik Tak Top Course</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #0f172a;
+        color: #e5e7eb;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background-color: #020617;
+      }
+
+      /* JUMBOTRON */
+      .jumbotron {
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c")
+          center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+      }
+
+      .jumbotron::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .jumbotron h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      /* FORM */
+      .form-wrapper {
+        background: rgba(2, 6, 23, 0.85);
+        padding: 40px;
+        border-radius: 15px;
+      }
+
+      .form-control,
+      .form-select {
+        background: #020617;
+        border: 1px solid #334155;
+        color: #e5e7eb;
+        height: 48px;
+      }
+
+      .form-control::placeholder {
+        color: #94a3b8;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        border: none;
+        height: 45px;
+        font-weight: 600;
+      }
+
+      /* INFORMASI LAYANAN */
+      .info-bg {
+        background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085")
+          center/cover no-repeat;
+        position: relative;
+        color: #fff;
+      }
+
+      .info-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+      }
+
+      .info-bg .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* KELAS */
+      .kelas-card {
+        background: #020617;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .kelas-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .kelas-card h5 {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .kelas-card p {
+        font-size: 0.9rem;
+        color: #cbd5f5;
+      }
+
+      footer {
+        background: #020617;
+        padding: 30px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          <img src="logo.jpeg" height="30" class="me-2" />
+          Tik Tak Top
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Layanan
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#pendaftaran"
+                    >Pendaftaran Anggota</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#informasi"
+                    >Informasi Layanan</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kelas">Koleksi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <section id="home" class="jumbotron">
+      <h1>Selamat Datang di Tik Tak Top Course</h1>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <h2 class="text-center mb-4">Tentang Kami</h2>
+      <p class="text-center fs-5" style="max-width: 800px; margin: auto">
+        Tik Tak Top Course adalah lembaga kursus komputer yang menyediakan
+        pelatihan Web Programming, Desain Grafis, dan Data Analysis dengan
+        instruktur profesional.
+      </p>
+    </section>
+
+    <!-- PENDAFTARAN -->
+    <section id="pendaftaran">
+      <div class="container">
+        <h2 class="text-center mb-4">Pendaftaran Anggota</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="form-wrapper">
+              <form id="formPendaftaran">
+                <input
+                  type="text"
+                  name="nama"
+                  class="form-control mb-3"
+                  placeholder="Nama Lengkap"
+                  required
+                />
+
+                <select name="program" class="form-select mb-3" required>
+                  <option value="">Pilih Program Kursus</option>
+                  <option>Desain Grafis</option>
+                  <option>Web Programming</option>
+                  <option>Data Analysis</option>
+                </select>
+
+                <input
+                  type="text"
+                  name="nik"
+                  class="form-control mb-3"
+                  placeholder="NIK / Nomor Induk"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="alamat"
+                  class="form-control mb-3"
+                  placeholder="Alamat"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="wa"
+                  class="form-control mb-3"
+                  placeholder="Nomor WhatsApp"
+                  required
+                />
+
+                <button class="btn btn-primary w-100" type="submit">
+                  Daftar Sekarang
+                </button>
+              </form>
+
+              <div id="status" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMASI LAYANAN -->
+    <section id="informasi" class="info-bg">
+      <div class="container text-center">
+        <h2 class="mb-4">Informasi Layanan</h2>
+        <p class="fs-5">
+          Kursus tersedia secara online dan offline, bersertifikat, jadwal
+          fleksibel, dan mentor profesional.
+        </p>
+      </div>
+    </section>
+
+    <!-- KELAS (ADA GAMBAR) -->
+    <section id="kelas">
+      <div class="container">
+        <h2 class="text-center mb-4">Daftar Kelas</h2>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="kelas-card">
+              <img
+                src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+                alt="Kelas Dasar Web"
+              />
+              <h5>Kelas Dasar Web</h5>
+              <p>HTML, CSS, dan Bootstrap untuk pemula</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="kelas-card">
+              <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+                alt="Kelas Python Pemula"
+              />
+              <h5>Kelas Python Pemula</h5>
+              <p>Belajar Python dari nol untuk data dan otomasi</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="kelas-card">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSEhMWFRUXFxUVFRUXFhcYFxcVFhUWFxcXGBUaHSggGBolHRUVITEhJSkrLi4uFyAzODMtNygtLisBCgoKDg0OGhAQGy8iHyY3Ny8rLTIyLTcwLzUsKzctKzUvLy8sLS83LzcvLS0tMi0tLS0tListLS0tKy0tNS8tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAACBQEGB//EADcQAAIBAgUBBgQFBAMBAQEAAAECEQADBBIhMUFRBSJhcYGRBhMyoUJSsdHhFCPB8BVicpKyM//EABkBAQEBAQEBAAAAAAAAAAAAAAAEAwUCAf/EADARAQACAQMCAwUHBQAAAAAAAAABAgMEETEhQQUSMyJhcZHwEyNCUYGx8RQVMlKh/9oADAMBAAIRAxEAPwDxSA8LHnTNu2eaYy10LQCFurBKKBXctBQJXQtEArpoKAVxmA3NUbEKDE1RrStzQMAVIpY4UjZq5NwcTQN1KVGLPK1cYxfGgPUy1RbynmiAjrQVyVU2AeBRgK7FAG3aA2AHpRCDVwK6BQIX+zw5klvKah7PH4QB4kSa0KlAicGYiZ8/4rqYZhoDA8KeroFBxF0qwFdAqwFBwLXQK6FqwoEsakEN6ULLWi6AiDrVDYHSgzytSKeOFHWqNhTxQJxUijtZI4qpWgDlqRRctcy0A4rkUXLXMtAOK5FFy1zLQXC12KsBXYoKxXQKsBVL1wKJNB1jGppcYxa6mNU7iKpfCEd0Zj4GgpfyEd0SfCkbmEEhszKT12FUuYJSTlZ0PiDUW1fUEKy3OgoOot9Do4ccDmm8Pi7sf3EAqtgkQzoM1OjGj8QigoMYOVqJiLLaSJql3EK47hSPGl3wane3odJU0D4w9s7H2NQ4Loayl7PUNlRnUkdJG/WnsNgbqCC5bxmgL/TuNjUzXBxU+bcG4PtV1xx5FBUYtuRRVxY5Bqy4xTuKPYtLc+lS3kpP6UmdgIYhaurqeRT1v4fuNshHmQPsdaOvwmx3uKPQn9qxtqMVebQznNjjmWcBXctLXMC4JAOxjTwqoS4Ov61s0OgVaKSXEuNxRVxfUUDMVIoS4pfGirdU8ig6BXYqwFdIoKRUirRUoKVVkB4osVwigXawKEcPTkVwigRNs9KrFPFaqUoEiK5lps2hVPk0FIqRVqVfGgHaR1oLYjFBdNzVVxqHfTzq4uI3T1oGK7JR+o6QaAdyCT3IX8wP+Kz7mDDHuXCranX/ACaPc7LvL9D6dBQ7dy9my3LYy9T/ABQURcSoEQ45MzT2GuhDOQA8xRsLiFQQFgeFNLettvHrQDXGKdxVLuR4ACsOdenHnXMTaUyMhyxoVOpPhFIN2dbJIV2Ugc7AdfX70FrmCTSUKSZ0Ox6mhJgM0ravGfI8Ac+tWtYTEAD5dwOBuZncH+K0LV513AnnSJoK2bF1QASWPXetvDdjYpt0Vf8A0wH2En7Ungsb30BH4l28xX0A1DrNTbFtFe6bUZrY9tnn7Hw8343A8FBP3MfpTSfD1n8QLeZj9K1qlc62rzW/EitqMk9ydnsqwv02k8yoJ9zTYFdqVha025ndlNpnlKgqVBXl8fNLvaN75rg2jAdhME90E690c8CjYbtIscvybg1icjRtO8V6H4VuTcvgOGAJ5JIOd9PLYe9ekmuvl1s4reXbf+HQyamaW8uzxIad1b1U1b+lB/D9jXtJqVn/AHKf9f8Arx/WT+Tw7YIeIoZwPQ1sfGwuC3bayssGIPXLlJj3Arylvtm6rRcSBBOaOAJ25O/NX4Mv2tIttsrxZPPXzND+lcbfY1PmON59aBhO31c5cpmY8PpzbiRt/uorSXFqa2aFVxp5FFXGLyCKNCN0NUbBrxIoLLeU7GrxSxwXQ1Q2HHX0oGytcy0qLzDf7irjF9RQGiuRVVxKnw86ICDsQaChFcy0QiuRQZaYtTvpQ8XkAnKT1K8CgXrCsSqMQesSNN6zmw2ItibRDjfedOgoHoSYDCdNDodeJ2og+YvX9RWb/wAgpgXrepI2Gumv71rYMLmz5n1jQ7fbzoLW8eeRNHTFKd9POjmyjcA+VJ4i3bUxmg+/kPM9KBg4ZG2j0pPEdiBjIY+R2jpVxYMnKQSOh1HpV1xDrv8AegQu4DEJqrTrx+3hXExV0vluWgRpq3rz/u9bFvG9R7UcXUbp60CeEvoggJA8KcXEIefeuNg0PEeVBbs88H3oG7GGQupgfUu3mK9rXgMLh3V00P1Lt/6Fe/rk+Jc1QazmEqUp2ozi2WtkyupAAMjnf3rCwvxAcwLPInUEAaegqbFpbZazaswwx4LXrvD1FSuA14/tT4jb5hVHdBoqkKpzGSJ7w09TyOteMOC2WZir5ixWyTtD2NQUh2NauhJvXGuMxzCVQZVOy90D79afrO9fLMxyztG07PJ9iW7eGuXnAb+40kab5mJ58a9B2h2gLUSrNM/THEdSOtZfw+c1y8G1g6SB+Zq3mQHcA+YqzVWxxl6x8ff06Kc81+06x8fkwr3xTbWJtXdegXTSZPerQ7H7UXEIXVWUBssNE7AzAJjQjfWnPkr+UewrqIBsAPIRWF7Ypj2a7T8WVrY5j2YYfxaVC2pbKfmHLpIJyNoRzpJ0javNMzwBbZWiPqbMT3jmmQOIgAjnWvQ/GqobdsPmgvlBXeWUjjjWPUV5fCdjCRdRiZ1E6cZfbTrGvlXW0Powv0vpw0rGDBEuqhjMlek6DniPWutgBwfegi069fT+K6mKYc+9VqHHwTDaDVAXXqPemlxvUURMSp8KBVcW3OtFTGjkUxkVuhobYJfEUHRfQ8+9Q2FPA9KA2APBFI4jC3w0rsFIABGrHk6cefNA++CHB99aE2EYba0j/wAheTKCpYx3zHPJH+PPij4XtsNEpuCeNBxm17sjUUBCzr19a6MY3QUWz2nabZv9idPQimJQ6937UHkP+UYNlu2yZIAOx9x6c0zhntlj8q5laIg68fyNaayu0K1sXBrLGPDkbbnfpRl7IRSTbABNAXD4WVHzCHPUR+tdfADg+9ANp11g+YoI7YIYJBaTHQzqeeIG9AS7h3UEgSegNJt2hcXR7ebcmREdADyfGmreJts7ZbkOdGneBwpERxrBopNyWzAXE4gT15GoGnjvQZ9q9ZYKZNuWkSedjzOuvOtaeGV2aTcRkIGkecwD6c0Cx2XbuqGNsodDvzBPnpJpj+gZQAAIG0dPKgbfBKdtKA+BYbGaGt1l0k+tMW8d1HtQLEOvUUW3jG5g05bxKnmPOrNYVuB5j+KCmExgLqCCO8v6iva14yzgRnUg/iX9RXs65PiXNUGs5hK8X8Q9gCSFYqragDzkrPSftXtKyviLEKlrXVie4PEbnyj9RWGjyTTLER3Zaa81vtHdjf1F1MF8lT/cH9tWG4txoRPMd32NK/DGCvXHi8CUWS2aIOvcUDx3PkeorqY0cg+len7Dvo1rucHvdZ61fqPuMdppHM/urzfdUma92hUqVK4rmPN4a9cm58jvMJlRlB3MfXA61q9pG/K/JEiGLarmnu5QA2n5uRxWd2BhRbvX3L/VAEwIAZjA963mcDcgeZir9TkmMsezE7e7np3VZrbZOI+oYT28adnKelgx9q0Ox7d9Vb5752zd0wghco07gA3k+tMnFW/zp/8AQ/er2rysJVgw6ggj7Vhkyzau3kiPhDO+SZjbyxH6MX4sYi2kRGYzIme6YrBt49uQD9q9R264CrJjvc+RrFNhG4Hp/FdTQ+jC7S+nACY5eZFGFxG5B8/5obdnrwSKC2BYbGftVigy2EU8R5UB8B0b3oGV16j/AH2q64xx4+lBxsK44nyqouuvUU0mPHIPpRRiUPPodP10oM5+1srBTqTwNwPzEToPGhribbN87OQdVGaCojTQGPE6eNXZSxC3LIKtMmNApYgAwSCYEkz+IQDqQtiLNhs2rALCSDKnPHdUA6/SugBmRvJFAYC8Bo63ABMEwzNG0sIGoGwG/hJriAMv9yzLd+QAQIWNAdQSZEDz2ymlbfY5mbVzMAQxGbfzYcGOh56mu3TikMjbvacc5emm0kk8+FAXCdnWrhL28wjITm1B0zISQTqJBg6/TI2pxsE/h71a1i2A1g0UY3/r96DKyMvUUe3iyN9acS4rbGfD+Kq+EU+Hl+1AribzsP7bBT/2ka8a8jwpfFX8sC5bLLGrxEmf+siOPUU0+DYba0MFhpt4H9qDPxHZ1l8rZshOsP4CQDrA0gxO3FXw+AvW3LM5K+HOkczGuuh9qdVLchmtidRI0kGJkbHYVp28Qp596BG3jGG+vnTVvGA7iKM+HU7j1FLtgPyn3oGQVboaE+CU+FKPh2G49RXUxLDmfOgI+Bbgg/ahMrLwR400mO6j2phMQp599KBTB4ps6iZ7y7+Yr3NeNJ/u2x8sZSQTcJgDXYRqTtvA1r2VcrxLmqDWcwq7AAkmANSegrxfauOdyzm2WGuRQCcqqJ1Zdy2n31MRXoPiHC3rqBLJUAyWLE6x9IjpOvoKyew/h2/bvB7rqUBLAAyToAoMr1k78DSDp40lseKs5LT1/J5080pE2mep1uxQcOBBVx3yNyCQJX2A9RSnZIazczTKnRh4dfMfvXqqx8R2a+c5QuXjWCPCIr3p9TW8Wplnl6w5otE1yd2wKlLYG26rleNPpjp0NM1zr1itpiJ3R2jadnnuzLfzXuBtMp0jxJ3nyrZxeEFyJJETtHMftWH2PjkS5dzwn06yYYliIGm4JA6yRpqJ3r2KRCAzAFpyg8xvHvVupvljLHl393y6qs1rxkjb9Pl1Jv2LbO8n2/amOz8AllSqaAnMfOAP8VY4y3+YUSxfVxKkEDTTrWGTJnmu199mV75Zj2t9mX8S2C6KBw0/Y15v+mdeD5j+K9R2/eyopie9H2NY6YtTvI866mh9GF2l9OCC4pxz70wmO6im4Vuhob4JT4eVWKETFKeY86sbStwD4/zSz9nngg0FrDLwfSgYfAKdpFIXbP1BHXMDl72hDkaCDE7g+NVxPabJCkZp3zaKF/ES5EaCTEzQ7OKskKcpVVbuQdCdwUGobfjp4UAms4m2sKCzT9U/50Ht7VW52owIz28xmFJWNgCWE6jUiIk6TxNNKM8taxEMwOsT3XOadyCQIy6RGmkmmrxaHLL8xTAVIndgss4G2skQSACddqDPOIsiVJKywJiCpcCdSwOYwRoSdlpvstVWCLxZYIUGYgkROpBgAARHPWlrVqzdfKbRR8xEjQjKJDcMBGXflgKeHZmUALEAQBQOGyjcDzH8UF8Kg3aPCR/mlWtMvBH+9aVTF3GLaLAMDMpkiBrqOpNAjicLeDZs3d/69JnYyCfH/SS12w6lVZSZmByOg1385idKaZHAJtuSI7qgAZQNQuTaNAJgmNhzVL1y2xyuhJgyVEaggQFPiYHJI0G1A/hu0rbaSJ85psqGHBFY69iBGLLryPDSNOdvE7miKzKeQaB18EDtp96XuYVhx7US1jTyJ+1NW8Up5jzoM9LpXYn/AHwpm3jTyKbe0DuAf960B8CODFARMSp5jzq7WlO4B8f5pFsIw4nyoasRsSKBt8AODFZl/s92MqytBI7pgrpB1BmfOnhi2iDr9j7igvZUrlVmUCYHAJaSQevmDHEUCuGu3ku2xlbLmQa/+gCT18NufX6Sa8Rgfmq4DH5igrBGpJZgJMyVC6nSefCfb1yvEuaoNZzCVKlSuYiSpUqUEqVKlB5XsNRfuX1uoSoMDMDrDsOd9p9q9HfwiOQWEkAgHkAxI+w9qzuw8wa6XAEt3dADlHXU6zPpHNa2cdR71bqr3jL0menHyU57WjJ0n62L/wDH2+h9zRrNkKIXzq2YdR71C46j3qe2TJaNrTMsZve0bTMs/tyyGRQfzf4NYLYE8Ga2e3MWAFVSCZkjeBHNZqYwciuxoomMMbujpo2xwSeyw3H++dWW+w2PvrWil5Tsa61lTuBVagmmMPI9qMuJU8x51HwQ4MUqLMjMhDDWCCODB+4oHHtqw2BpK/2RabiPLTqOPM+9VKleo+1WXEsPHzoM7FfDsg5HYEgDQhe6Pw6DQb/zFAxVrFIcygQCug1ERDcSSCZ3Gijk1vJjRyPajpeU7GgyMFi7uWXidfaTlnXeI5pxMd1HtTb4dTuBQHwI4MUAcZfLJFpgrEgZiYKiRJEggmJgGkrt/EyYsBhJggptJAmTqYg+tE7Q7OulSLbBTwd/5HpQraugClWJAidNY0kydzv60GO2GvWoCjkSRrt4HiABodzvWthsSwALgFgN426gHencHhwqxOYeJJA0AgSTppUuYJTtp+lBa1i1Ph5/vR2QHcTWZcwzLx6iuW7hXYx+lA5cwA4MUs+FYce1HtY78w9R+1N27ytsaDLRyuxIpm3jjyJ8tKceyDuBS2IwqqJLBR47e9Aa3ilPMedGKA7waxsfgruWF06kHpwI9uPOrXsNirVkYn5bLYLC2rkgy0kMxhpCjKRrGx8JDRfBLxI/SgtgmG0GmezbeJuJZuGyQl9wlliVGdiCesqO62rADTSZE9TFoSyyJVirQQQGGhEjSgz2QjqDTdntO6uzk+ev602IPQ0NsKp4jyrzatbcxu+TWJ5Hs9vt+JQfKnbfbaHg+QI/zFYj4E8GapbwtxmVFUlmIUARqSYAmsLaPDb8LKdPjns9IO1bemYss9VMDzYSB70xYxVt/odW/wDLA/pXnsb2ZesFgROSM7IcyoWMBWYaK0iINd7O7Ku4klrdkXCmWWBVGWZK94kaaNt49ant4dSf8ZmGM6OvaXpqleYxGBu4e4Ed7tohR3C4cFSdDoSJ0InfU+daFrtBuoP++FYW8OyRxMSynR37Sxrl1gzQeT+tETFnkTTdyyDuPWu3+xmFtLv4XLBdeV0MiuvHSHRgJMQp8POjAA9DRrXwri2UMtksrAEEPb1B1B1as29Za27IwKspIYSNCPEV9DD4VTxHlQXwPQ0RXuBQ5U5CcoYg5Sd4DbT4Ve3ilO+lAg9hhxUS4w5rbw9gurskEIMzajQTGxOvpSWNKKpZhMcCASeAPE0Gfe7UUdxyRKliwlYUaEluN6HhLFostxHkABVB1ACjLEjbWTtM+1F7V7EtfOuYdtLy5fmKNfwK4BOx0uA+tJXeyHyqqEG2uwH1SNofWOm0670DF44mZUKcxErOZEA0kE6knMCdhCQIJmiNcHeLrlXQKRIZ2JiBbPiQAeZ9ayWvYi0Nt31YtIRZ1JGkaTz0o9/tlM2V1zAtkmASWXXYawCQJ60Ddtrb6K4mSuU6HMJBHSe6far3MOw4quANkxcVY1JA/CGAyE5eDAj3rUW6DsaDLW4RsSKMmMPImnntA7ikbyoHFuSGaYG+2p8vOgOmLU7yKKHB5FI/05kwQY3g6jzFDKEcUCNq4RsYpy1jvzD1H7Vy72ap+g5D0H0+q7e0Updsun1LI/Mskeq7j7+dBr27gOxrlzDK249RWRbcHUGfEfvTlrGMN9R9/egtcwJ4M/rS7IRuCK0beKU+HnRonfWgzbWIYbGarcxCOxBYh1A03USe62RtJkHXwol02mY2wTmAJaJhQPzNsu/Wkj2X3Cttg6mZEg5uIZvq9dT40DLWLgAWyQFGoCGDmksSykjNJie9y2kmR77sgm5gMLhbxCnEDFIuciTft3TctkFQAVhH4BiPGvlCLdsnXNlHe0GYFQCconbhRou067VoYHtx2YIVJh4GsgEKGLawRBMTHI60H1N1s4lMMgUPZtY02UVhKlbNprex0YSrH1pPB9mG3bX+mw1q7nv4r+pzhTtcIRS5/wD5rkiI0EDyrx+DxCoIUZR4ExTtu7Mw2++u/n1oN/NbW3gbTW7SpeJ+a8AtCXgVAu75eCeRTmMtNDG/h7akYpEw6gLb+ZbzapOxXLyea8V2hiVACwHcglLc94jmOg8dqXui3eVpJKp3TmMrpuszsNiKD6K9q09ywbqBEa+9sJcsizckKxVNDluWswADRrI1M1LQZTh3vWkt3jicgARRNojUx4HQN5da+YYzs+4+V8/zAo/tyfpkRmDCeDppFZ9q9iLbTdZiEXSJbMQSJzEkqNQfCg+uXbzva7QUIpIuAQEWcudgxOmpAEzuN6zvhfAqcPi1+Ubwb5H9sMVLQ7H6gJEb+leCwPxA+YqQZLZJBMGVBO8Ejr6da2rOPjqPI0Hqew+yVF28t/DLZw5+UwDtmKvnUKBcIkhiGkdNKth7F0C61vD23xH9VkuoUUhLOXuqoP0odO9zM+XnFv5vxT5mrEk6yZIgmTMdJoPV9kWVFvMtoM39RcW8iIl7KAxi2GZhlSPxVmdtX1GFswCq/OxIUHcAXCADrvFYJw0fSSsiDB46Us+GbbcDp+1B6XsVgcLjI6WP/wBtWj2X2cLlvCMLYbLdf5hygwM0jN4R1rwskaajqKLaxTjQMY3ielB7vEWQ9kWyqi0MYy3IVQFt5+oHd3AzbwapisCSW+dYtplxVhcPlRVzWzdAZTH1Lk118elePt47cGRO+uh86Ot6Y70xtrt5dKDdxbq5x6/LtKLKMtvKgWP7h709fGjdt2VXD4n5tkFbAw7I4sKtokkFjZbOzvAIzFudq8d2jjwpy/UdC41HcnVidtN6ALVu5J7ym3p3iRAIkDQxG2lBu/GBRe0L5nK7fLE7yBaSND0nisM4Ibox3zsyn+47eOwA02/Sksd2XcZhdVg5AOXNJXURJI3MTHnSlsXLbIssFklidZJ1Cr4a+kUGquKIQC6MzlsvegAaEySBoIExqdQKBaWzfy9wqWkgx+JN4Ya6TvS1n4h7wUrIILAbmAfxA/SY13rUweIt6OFjMJnwbXbig4MAUAVQIGgAoTKRuK1UvKdjXWAoMXEY/wCUuYkwIERJJJgADrNVt4y0QLzDLv354MT4CYE+VGvPZe58nKSeo+mRqfbT3FAxPZKN3FfRfqtgiCDpDL00oKW+zgJ+XcHf+ot9UamVPBJJNWxKYgscjlFEAAhWkADvT5z7Vl4vsq+ktbO/A41zes6DwFFftVrYVcjucoJaI11B09KDerorgrtAC9gkYyRDfmXQ+vX1mlbuDuLtDj/5b9j9q067QYfzQNDIP5SCG9Bz6UrZ7YYNA5OinulUG7ODt1jTTx0r0l20rCGAI6ETSGK7HVgQDofwtLD0P1D3oFv62zelW0JIB/DmIAYCGENpHpRLmCJa2yNIUZTrDhZHdGxywN5mY32rMxvZLrJAIMEA/WADuQdwfFgdzQs95SgtiEEgAd9YC6bayTySNqDZGNul8ptfhBCtoQSYjNrMAGTt9p0TgFkldCd/H1pXCYi4FGYgtAzDiY1jwpy3jByIoF7mGYcT5UKa1lYHYzSN3FK135QSTyx0jSY67elAla7SzM1uAygAkmCNZ99jR8PiLLqAphTJCg90+JXkT70G/hbDFkByGYP4ZngMN6Ux3ZF0CVc5ge6YHdQ7qsRHnQPphnDAqwIJBfJoSdRtwAAsa9Zmo/aTZoa3oVLAEFTIIAEn6ifAc1k3cXdtlQAQoKr3tZEakv8A7tWzgca5UMw11jynQ9RNA3/QL9QGViNevkTQ3wzDxpm3jAd9KOrg7GgytqNbvsOafa2DuKA+DHBoJbxY5EUyjg7Gs97JHFDBig1XQHcUvcwg40oNvFMN9aYt4lT4UCtzDkcUIGtUGqPaB3FAgbxIggMNiD0qrKpEKzWwTJA2PUHmmbmD6Gl3skbigWvWLqibWXujKgTYL4g7nSPCavc7QyoM4DsFzMTpzEDqf2q4MVf53BAbzHFAFcNZvHRSDAbURo37xR3whGw08KJhHtroBlnfnbbWm1cHY0GUyxSSdrMHIWCigyZiGH4dd+favWP2TdeybqIH0Yqustk+qCAVGx3ImNKDd+FrdxWVihuK6qVBkKwS47Bjl+ofLiQSJkUGFYx1ogXWXLPP0nXr7Vw9noQ3y2AzEHvaxG0dRvoetaF74QuXFRjetqjZYV2MNnkqphT+U+FJH4PxpPdeyl5hJtl2BCB8oMBCNSesxxQUsPdR2a5JXKSqrqNOPYfelb/bOUwbYYwDKzGvHpWrawxtq1y7ftmzYzDEOjEuHAGW2ltgMzO0qp27rdNcd/iG3pmTcSJGsHag2BVhUqUHa6KlSg7XalSg7QLuCRtYg/mXQ/z61ypQL3MG6/SQ46HRv2P2pdrkbgg9CIny4NSpQZx7RuqwIRhngKp0ykHUsw208/OtIdsJMNqACS0aQND3vXepUoDNbR4KOUIByRECR5ag0O4121bhQxIBYto2ZieZmB4VKlA5hCbgJdQNoInXTXfxoj4ToalSgXe2RuK6jEbVKlAxbxZ51pm3iVPMVKlAWaHcsqeKlSgXfCHg0B1I4qVKBS/jyjKq6kyW12UbmmsB2uHB023mpUoH7eJVtjRalSgFcsA8Uu+DPBqVKBd0I3FVDEbVKlA5b7VcJ8tgjKJjMisy5t8rESJpv/n7h1BVWkMWFtJZgrLLmO9oxBnealSgova19beVBaZvmW2XuJ8u2ltCqoluO7G4I/zQMD8UYlcxu5ZUGGKKXK5s2XOdSJ19alSgV/54EPbYKAQ5cZVYEXYLFjG4gQeI0pdexbcaAEeNSpQf/9k="
+                alt="Kelas Excel untuk Data"
+              />
+              <h5>Kelas Excel untuk Data</h5>
+              <p>Pengolahan data, rumus, dan visualisasi Excel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>📍 Jl. Teknologi No.10, Indonesia</p>
+      <p>📞 0812-3045-1821 | ✉️ info@tiktaktop.com</p>
+      <p>Instagram • Facebook • WhatsApp</p>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GOOGLE SHEETS -->
+    <script>
+      const scriptURL = "PASTE_URL_GOOGLE_APPS_SCRIPT_DI_SINI";
+      const form = document.getElementById("formPendaftaran");
+      const status = document.getElementById("status");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(() => {
+            status.innerHTML =
+              '<div class="alert alert-success">Pendaftaran berhasil!</div>';
+            form.reset();
+          })
+          .catch(() => {
+            status.innerHTML =
+              '<div class="alert alert-danger">Gagal mengirim data</div>';
+          });
+      });
+    </script>
+  </body>
+</html>
